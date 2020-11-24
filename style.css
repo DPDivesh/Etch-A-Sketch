@@ -10,7 +10,12 @@ font-family: 'Roboto';
 color: #343f3e;
 }
 
-.floatContainer{
+.restartButton{
+  border: solid #343f3e;
+  background-color: white;
+  width: 4rem;
+  align-content: center;
+  margin-top:5%;
 }
 
 .sketchOptions{
@@ -19,6 +24,7 @@ color: #343f3e;
 float: left;
 margin-left: 18%;  
 width: 25%;
+margin-top: 5%;
 }
 
 .sketchOptions h4{
@@ -33,6 +39,14 @@ margin-bottom:5rem;
 width: 70%;
 justify-content: space-between;
 align-items: baseline;
+}
+
+.restartButton.Eraser{
+  border: solid #343f3e;
+  margin-top: 5%;
+  width: 4rem;
+  text-align: center;
+  background-color: white;
 }
 
 
@@ -70,8 +84,9 @@ margin-right: 8%;
   background-color: white;
   box-sizing: border-box;
   flex:1 1;
-  border:1px #dcedff;
-  border-style: dashed ridge;
+  transition: all .2s linear;
+  /*border:1px #dcedff;
+  border-style: dashed ridge;*/
 }
 
 .squarePixel::before{

@@ -33,6 +33,12 @@ sliderChange = document.getElementById("myRange");
 
 const containerArea = 250000;
 
+function restartSketch(){
+  container = document.querySelector('#pixelSketchContainer');
+  container.innerHTML="";
+  colorValue =document.getElementById("colorPicker").value;
+  gridInitializer();
+}
 
 function getVal(e){
   container = document.querySelector('#pixelSketchContainer');
@@ -51,7 +57,7 @@ function gridInitializer(){
 console.log(document.getElementById("pixelSketchContainer").offsetWidth);
 console.log(containerArea);
   givenValue = document.querySelectorAll("input");
-  givenSquares = givenValue[1].value;
+  givenSquares = givenValue[2].value;
   console.log(givenSquares);
 
   squareDisplay = document.querySelector(".updatingValue");
@@ -71,12 +77,33 @@ computedWidth = Math.sqrt(containerArea/(givenSquares * givenSquares));
       //console.log(i, j);
       square = document.createElement("div");
       square.classList.add("squarePixel");
-      square.style.width =computedWidth +"px" ;
+      square.style.width =computedWidth +"px";
       container.append(square);
- 
-    }
+    }   
   }
+  hoverEffect = Array.from(document.querySelectorAll(".squarePixel"));
+  for(let l=0; l<hoverEffect.length;l++ ){
+  hoverEffect[l].addEventListener("mouseover", ()=>{
+  hoverEffect[l].style.backgroundColor=colorValue;
+
+  });
+
+  }
+  //hoverEffect = Array.from(document.querySelectorAll(".squarePixel"));
+  //hoverEffect = document.getElementById("pixelSketchContainer");
+  //console.log(hoverEffect);
+  //console.log(hoverEffect);
 }
 
+console.log(document.getElementById("colorPicker").value)
+
+let colorValue = "#343f3e"
+
+function colorPick(e){
+  colorValue=e;
+  console.log("test");
+  console.log(colorValue);
+  return;
+}
 
 gridInitializer();
