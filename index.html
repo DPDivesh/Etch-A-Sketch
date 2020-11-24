@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=], initial-scale=1.0">
+  <title>Etch A Sketch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 class="titleHeader">Etch-A-Sketch</h2>
+  <div class="floatContainer"> 
+  
+    <div class="sketchOptions">
+    <div class="optionContainer">
+    <h4> Colors</h4>
+    <div>
+    <input type="color" id="colorPicker" value="=#343f3e">
+  </div>
+    </div>
+    <div class="optionContainer">
+    <h4>Brush Size</h4>
+    <div class="brushOptions">
+    <h5 class="smallBrush">Small</h5>
+    <h5 class="mediumBrush">Medium</h5>
+    <h5 class="largeBrush">Large</h5>
+    </div>
+    <div class="optionContainer">
+    <h4>Slider</h4>
+    <div class=updatingValue>value</div>
+    <input type="range" min="1" max="100" value="16" step=1 class="slider" id="myRange" onchange="getVal(this.value)">
+    </div>
+    </div>
+  </div>
+  <div id=pixelSketchContainer>
+  </div>
+ 
+</div>
+</body>
+<script src="app.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+</html>

@@ -1,0 +1,81 @@
+
+body{
+  background-color: #dcedff;
+}
+
+.titleHeader{
+  font-size: 70px;
+margin-left: 35%;
+font-family: 'Roboto';
+color: #343f3e;
+}
+
+.floatContainer{
+}
+
+.sketchOptions{
+  font-family: 'Roboto';
+  color: #343f3e;
+float: left;
+margin-left: 18%;  
+width: 25%;
+}
+
+.sketchOptions h4{
+text-decoration: underline;
+}
+.optionContainer{
+margin-bottom:5rem;
+}
+
+.brushOptions{
+  display: flex;
+width: 70%;
+justify-content: space-between;
+align-items: baseline;
+}
+
+
+.smallBrush{
+  font-size: .7rem;
+}
+.smallBrush:hover{
+  color: #8f91a2;
+}
+.mediumBrush{
+  font-size: .9rem;
+}
+.mediumBrush:hover{
+  color: #8f91a2;
+}
+.largeBrush{
+  font-size: 1.2rem;
+}
+.largeBrush:hover{
+  color: #8f91a2;
+}
+  
+#pixelSketchContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: solid #505a5b;  
+  flex-direction: column;
+  float: right;
+margin-right: 8%;
+}
+
+.squarePixel{
+  background-color: white;
+  box-sizing: border-box;
+  flex:1 1;
+  border:1px #dcedff;
+  border-style: dashed ridge;
+}
+
+.squarePixel::before{
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
