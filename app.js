@@ -36,7 +36,7 @@ const containerArea = 250000;
 function restartSketch(){
   container = document.querySelector('#pixelSketchContainer');
   container.innerHTML="";
-  colorValue =document.getElementById("colorPicker").value;
+  colorValue ="#343f3e";
   gridInitializer();
 }
 
